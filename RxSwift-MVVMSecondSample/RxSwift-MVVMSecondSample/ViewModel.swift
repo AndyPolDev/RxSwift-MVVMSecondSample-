@@ -20,4 +20,22 @@ class ViewModel {
 		}
 		task.resume()
 	}
+	
+	func addUser(newUser: UserModelDTO) {
+		guard var users = try? users.value() else { return }
+		users.insert(newUser, at: 0)
+		self.users.on(.next(users)) 
+	}
+	
+	func deleteUser(index: Int) {
+		guard var users = try? users.value() else { return }
+		users.remove(at: index)
+		self.users.on(.next(users))
+	}
+	
+	func editUser(title: String, index: Int) {
+		guard var users = try? users.value() else { return }
+		users[index].title = title
+		self.users.on(.next(users))
+	}
 }

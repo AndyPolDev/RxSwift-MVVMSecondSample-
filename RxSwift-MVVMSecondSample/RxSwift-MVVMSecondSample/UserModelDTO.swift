@@ -3,7 +3,7 @@ import Foundation
 struct UserModelDTO: Codable {
 	let userID: Int
 	let id: Int
-	let title: String
+	var title: String
 	let body: String
 
 	enum CodingKeys: String, CodingKey {
