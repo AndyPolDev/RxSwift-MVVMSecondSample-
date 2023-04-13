@@ -3,7 +3,7 @@ import RxCocoa
 import RxSwift
 import RxDataSources
 
-class ViewController: UIViewController, UIScrollViewDelegate {
+class MainViewController: UIViewController, UIScrollViewDelegate {
 	
 	private var viewModel = ViewModel()
 	private var bag = DisposeBag()
