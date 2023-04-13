@@ -45,7 +45,8 @@ class LoginViewController: UIViewController {
 	
 	
 	@objc private func loginButtonPressed() {
-		
+		let mainViewController = MainViewController()
+		navigationController?.pushViewController(mainViewController, animated: true)
 	}
 	
 	private func setupViews() {
